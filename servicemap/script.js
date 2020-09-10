@@ -149,7 +149,7 @@ function addSourceData(filter) {
     if (filter.length != 1){  
         map.addSource('organizations', {
             type: 'geojson',
-            data: '/data/features.geojson',
+            data: '/servicemap/data/features.geojson',
             filter: filter,
             cluster: true,
             generateId: true, 
@@ -160,7 +160,7 @@ function addSourceData(filter) {
     else {  // when there's no filter
         map.addSource('organizations', {
             type: 'geojson',
-            data: '/data/features.geojson',
+            data: '/servicemap/data/features.geojson',
             cluster: true,
             generateId: true, 
             clusterMaxZoom: 7, // Max zoom to cluster points on
