@@ -1,0 +1,228 @@
+
+.main {
+  position: absolute; 
+  /* top: 10vh; bottom: 0; */
+  width: 100vw; overflow-x: hidden; overflow-y: hidden;
+  overflow-y: scroll;
+  z-index: -1;
+}
+
+.map {
+  top: 0; bottom: 0; 
+  height: 80vh; 
+  overflow-x: hidden; overflow-y: hidden;
+  z-index: -1;
+}
+
+.top {
+  height:10vh;
+}
+
+/* filter tag */
+.tags {
+    display: flex;
+    align-items: baseline;
+    flex-wrap: wrap;
+    margin-bottom: 0.2vh;
+  }
+  .tags div {
+    font-weight: 600;
+    margin-right: 0.2vw;
+  }
+  .tags .tag {
+    display: flex;
+    cursor: pointer;
+    margin-bottom: 0.2vh;
+    margin-right: 0.6vw;
+    color: white;
+    background: gray;
+    padding: 0.5vh 0.6vw 0.5vh 0.6vw;
+    font-weight: 600;
+    font-size: 3vh;
+    transition: all 0.2s ease;
+    border-radius: 3vh;
+    overflow: hidden;
+  }
+  /* .tags .tag:after{
+    content: "x";
+    cursor: pointer;
+    opacity: 0;
+    visibility: hidden;
+    max-width: 0;
+    transition: all 0.2s ease;
+  } */
+  .tags .all:hover, .tags .all.active {
+    background: ivory;
+    color: gray;
+  }
+  .tags .red:hover, .red.active{
+    background: indianred;
+  }
+  .tags .orange:hover, .orange.active{
+    background: orange;
+  }
+  .tags .yellow:hover, .yellow.active{
+    background: gold;
+  }
+  .tags .green:hover, .green.active{
+    background: seagreen;
+  }
+  .tags .blue:hover, .blue.active{
+    background: skyblue;
+  }
+  .tags .purple:hover, .purple.active{
+    background: plum;
+  }
+  
+  /* small tags in side panel */
+  .tags .small {
+    display: flex;
+    cursor: pointer;
+    margin-bottom: 0.2vh;
+    margin-right: 0.2vw;
+    color: white;
+    padding: 0.4vh 0.4vw 0.4vh 0.4vw;
+    font-weight: 600;
+    font-size: 2vh;
+    transition: all 0.2s ease;
+    overflow: hidden;
+  }
+
+/* side panel */
+.sidepanel  {
+  width: 0;
+  position: absolute;
+  z-index: 1;
+  height: 77vh;
+  top: 0; 
+  right: 0;
+  background-color: rgb(245, 245, 245);
+  overflow-x: hidden;
+  overflow-y: scroll;
+  transition: 0.5s;
+  padding-left: 1vw; padding-right: 1vw;
+  padding-top: 3vh;
+}
+
+/* .sidepanel a {
+  padding: 8px 8px 8px 32px;
+  text-decoration: none;
+  font-size: 25px;
+  color: gray;
+  display: block;
+  transition: 0.3s;
+}
+
+.sidepanel a:hover {
+  color: #f1f1f1;
+} */
+
+/* checkbox */
+input[type="checkbox"][id^="checkbox"] {
+  display: none;
+}
+
+label {
+  border: 1px solid #fff;
+  padding: 10px;
+  display: block;
+  position: relative;
+  margin: 10px;
+  cursor: pointer;
+}
+
+label:before {
+  background-color: white;
+  color: white;
+  content: " ";
+  display: block;
+  border-radius: 50%;
+  border: 1px solid grey;
+  position: absolute;
+  top: -5px;
+  left: -5px;
+  width: 25px;
+  height: 25px;
+  text-align: center;
+  line-height: 28px;
+  transition-duration: 0.4s;
+  transform: scale(0);
+}
+
+label img {
+  height: 100px;
+  width: 100px;
+  transition-duration: 0.2s;
+  transform-origin: 50% 50%;
+  filter: grayscale(100%);
+}
+
+:checked + label {
+  border-color: #ddd;
+}
+
+:checked + label:before {
+  content: "✓";
+  background-color: grey;
+  transform: scale(1);
+}
+
+:checked + label img {
+  transform: scale(0.9);
+  /* box-shadow: 0 0 5px #333; */
+  z-index: -1;
+  filter: grayscale(0);
+}
+
+/* side panel for info */
+.sidepanel .closebtn {
+  position: absolute;
+  top: 0;
+  right: 25px;
+  font-size: 36px;
+
+  padding: 8px 8px 8px 32px;
+  text-decoration: none;
+  font-size: 25px;
+  color: gray;
+  display: block;
+  transition: 0.3s;
+}
+
+.sidepanel .panelList {
+  font-size: 2.5vh;
+  padding-right: 2vw;
+  display: '';
+}
+
+/* sidepanel div styling */
+.sidepanel .block {
+  margin-top: 5vh; margin-bottom: 8vh;
+  padding: 3vh;
+  background-color: white;
+  overflow-y: auto;
+}
+
+.sidepanel .block:hover {
+  -webkit-box-shadow: 0 8px 16px rgba(0, 20, 80, 0.02), 0 4px 16px rgba(0, 0, 0, 0.08);
+  box-shadow: 0 8px 16px rgba(0, 20, 80, 0.02), 0 4px 16px rgba(0, 0, 0, 0.08);
+}
+
+.sidepanel .block a {
+  color: gray
+}
+
+/* watermark */
+.attribution-container {
+  top: 0;
+  left: 3vw;
+  padding-left: 0.5vw; padding-right: 0.5vw;
+  position: absolute;
+  background-color: rgb(240, 240, 240);
+  display: block;
+  margin: 0 10 5;
+}
+
+.attribution-container a {
+  color: black;
+}

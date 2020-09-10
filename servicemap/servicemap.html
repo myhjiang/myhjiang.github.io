@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="en" prefix="og: http://ogp.me/ns#">
+<head>
+  <meta charset="utf-8" />
+  <title>Service Map of LGBT's Anti-Domestic Violence Intervention</title>
+  <meta name="viewport" content="initial-scale=1,maximum-scale=1,user-scalable=no" />
+  <script src="https://api.mapbox.com/mapbox-gl-js/v1.12.0/mapbox-gl.js"></script>
+  <link href="https://api.mapbox.com/mapbox-gl-js/v1.12.0/mapbox-gl.css" rel="stylesheet" />
+  <link rel="stylesheet" href="static.css">
+</head>
+<body>
+  <style src="blank.css"></style>
+  <div class="top">
+    <div class="tags">
+      <button class="tag all" type="button" id="all" onclick="all_filter()">所有服务</button>
+      <button class="tag red" type="button" id="social"
+      onclick="service_filter('social')">社工服务</button>
+      <button class="tag orange" type="button" id="psycho" onclick="service_filter('psycho')">心理咨询</button>
+      <button class="tag yellow" type="button" id="legal" onclick="service_filter('legal')">法律服务</button>
+      <button class="tag green" type="button" id="referral" onclick="service_filter('referral')">转介</button>
+      <button class="tag blue" type="button" id="refuge" onclick="service_filter('refuge')">庇护</button>
+      <button class="tag purple" type="button" id="funding" 
+      onclick="service_filter('funding')">紧急资金救助</button>
+
+      <input type="checkbox" id="checkbox" onclick="lgbt_filter()"/>
+      <label for="checkbox" >仅服务LGBT+社群  <img src="../data/fig/lgbt_marker.jpg" style="height: 5vh; width: auto"></label>
+
+      <input type="checkbox" id="checkbox2" onclick="nationwide_filter()"/>
+      <label for="checkbox2" >仅显示全国服务机构 <img src="../data/fig/star.png" style="height: 5vh; width: auto"></label>
+    </div>
+
+    <div class="main">
+      <div id='map' class="map">
+        <div class="attribution-container" style="z-index: 9999;">
+        <a href="http://www.tongyulala.org/en/index.html"> Source Data: @ 同语  </a>
+      </div>
+      <div id="mySidepanel" class="sidepanel">
+        <a href="javascript:void(0)" class="closebtn" onclick="closePanel()">×</a>
+        <div id="innerPanel"></div>
+      </div>
+    </div>
+  <script src="script.js"></script>
+</body>
+</html>
